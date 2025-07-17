@@ -1,0 +1,18 @@
+{
+  "name": "shenfun Spectral Galerkin",
+  "build": { "dockerfile": "Dockerfile" },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "python.pythonPath": "/opt/conda/bin/python"
+  },
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"          // notebooks in‑browser
+      ]
+    }
+  },
+  "postCreateCommand": "python - <<'PY'\nimport shenfun, mpi4py_fft, sys;print('shenfun',shenfun.__version__,'ready ✓')\nPY"
+}
